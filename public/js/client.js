@@ -98,7 +98,7 @@ var getBadges = function(t){
         return {
           title: 'Detail Badge', // for detail badges only
           text: 'Dynamic ' + (Math.random() * 100).toFixed(0).toString(),
-          icon: GLITCH_ICON, // for card front badges only
+          icon: GRAY_ICON, // for card front badges only
           color: randomBadgeColor(),
           refresh: 10 // in seconds
         };
@@ -108,7 +108,7 @@ var getBadges = function(t){
       // you can mix and match between static and dynamic
       title: 'Detail Badge', // for detail badges only
       text: 'Static',
-      icon: GLITCH_ICON, // for card front badges only
+      icon: GRAY_ICON, // for card front badges only
       color: null
     }, {
       // card detail badges (those that appear on the back of cards)
@@ -116,7 +116,7 @@ var getBadges = function(t){
       // open a popup on click
       title: 'Popup Detail Badge', // for detail badges only
       text: 'Popup',
-      icon: GLITCH_ICON, // for card front badges only
+      icon: GRAY_ICON, // for card front badges only
       callback: function(context) { // function to run on click
         return context.popup({
           title: 'Card Detail Badge Popup',
@@ -130,7 +130,7 @@ var getBadges = function(t){
       // go to a new tab at that url
       title: 'URL Detail Badge', // for detail badges only
       text: 'URL',
-      icon: GLITCH_ICON, // for card front badges only
+      icon: GRAY_ICON, // for card front badges only
       url: 'https://trello.com/home',
       target: 'Trello Landing Page' // optional target for above url
     }];

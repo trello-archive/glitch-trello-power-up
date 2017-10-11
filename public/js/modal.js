@@ -11,21 +11,3 @@ t.render(function(){
   // you might want to react to, such as new data being
   // stored with t.set()
 });
-
-// Important! If you are using the overlay, you should implement
-// the following two methods to ensure that closing the overlay
-// is simple and consistent for the Trello user
-
-// close overlay if user clicks outside our content
-document.addEventListener('click', function(e) {
-  if(e.target.tagName == 'BODY') {
-    t.closeOverlay().done();
-  }
-});
-
-// close overlay if user presses escape key
-document.addEventListener('keyup', function(e) {
-  if(e.keyCode == 27) {
-    t.closeOverlay().done();
-  }
-});
