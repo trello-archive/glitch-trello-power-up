@@ -6,10 +6,12 @@
   "scripts": {
     "start": "node server.js"
   },
+  "repository": "https://github.com/trello/glitch-trello-power-up",
   "dependencies": {
     "compression": "^1.7.1",
     "cors": "^2.8.4",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "node-nocache": "^1.0.4"
   },
   "engines": {
     "node": "4.4.5"
