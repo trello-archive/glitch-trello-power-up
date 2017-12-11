@@ -263,7 +263,7 @@ TrelloPowerUp.initialize({
 
     // we will just claim urls for Yellowstone
     var claimed = options.entries.filter(function(attachment){
-      return attachment.url.indexOf('http://www.nps.gov/yell/') === 0;
+      return attachment.url.indexOf('www.nps.gov/yell/') > -1;
     });
 
     // you can have more than one attachment section on a card
