@@ -14,7 +14,7 @@
     "node-nocache": "^1.0.4"
   },
   "engines": {
-    "node": "4.4.5"
+    "node": "9.x"
   },
   "keywords": [
     "power-ups",

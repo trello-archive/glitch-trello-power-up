@@ -263,7 +263,7 @@ TrelloPowerUp.initialize({
 
     // we will just claim urls for Yellowstone
     var claimed = options.entries.filter(function(attachment){
-      return attachment.url.indexOf('http://www.nps.gov/yell/') === 0;
+      return attachment.url.indexOf('www.nps.gov/yell/') > -1;
     });
 
     // you can have more than one attachment section on a card
@@ -281,6 +281,8 @@ TrelloPowerUp.initialize({
         title: 'Example Attachment Section: Yellowstone',
         content: {
           type: 'iframe',
+          // You'll need to sign the URL to ensure that the iframe can continue to
+          // communicate with Trello.
           url: t.signUrl('./section.html', { arg: 'you can pass your section args here' }),
           height: 230
         }
@@ -409,6 +411,8 @@ TrelloPowerUp.initialize({
     
     // For instance, if your Power-Up requires a token to be set for the member you could do the following:
     return t.get('member', 'private', 'token')
+    // Or if you needed to set/get a non-Trello secret token, like an oauth token, you could
+    // use t.storeSecret('key', 'value') and t.loadSecret('key')
     .then(function(token){
       if(token){
         return { authorized: true };

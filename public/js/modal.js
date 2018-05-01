@@ -3,7 +3,7 @@
 var t = TrelloPowerUp.iframe();
 
 // you can access arguments passed to your iframe like so
-var num = t.arg('rand');
+var num = t.arg('text');
 
 t.render(function(){
   // this function we be called once on initial load
